@@ -2,11 +2,15 @@
   "name": "camapp",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gcp-build": "next build"
   },
   "dependencies": {
     "@types/node": "18.11.9",
