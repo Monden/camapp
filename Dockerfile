@@ -8,8 +8,9 @@ WORKDIR /app
 
 # Prepare node_modules
 COPY ./.yarn ./.yarn
-COPY ./package.json ./yarn.lock .yarnrc .
-RUN yarn install --frozen-lockfile --production
+COPY ./package.json ./yarn.lock .
+RUN yarn install --production
+# RUN yarn install --frozen-lockfile --production
 
 # Run phase
 FROM gcr.io/distroless/nodejs:$NODE_VERSION AS runner
